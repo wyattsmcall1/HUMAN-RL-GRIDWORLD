@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<!-- University of Illinois>
+Copyright (c) 2017 University of Illinois
+All rights reserved.
+Developed by: 	  Denis Osipychev
+                  Department of Computational Science and Engineering
+                  University of Illinois at Urbana Champaign
+-->
+    <head>
+        <meta charset="utf-8">
+        <title>MDP Grid World Simulation</title>
+        <script src="UGrid2D.js"></script>
+        <script src="main.js"></script>
+        <script src="mdp.js"></script>
+        <script src="controls.js"></script>
+        <script src="highcharts.js"></script>
+        <script src="exporting.js"></script>
+        <script src="https://sdk.amazonaws.com/js/aws-sdk-2.82.0.js"></script>
+    </head>
+    <body onload="main()">
+        <fieldset style="min-width: 580px; max-width: 580px">
+            <form id="input_form">
+                <table>
+                    <tr>
+                        <td style="min-width: 580px; max-width: 580px margin: 0">
+                            <p align="justify">
+                            The following game is played for twenty episodes in each of four experiments. The goal of the game is to maximize the reward, which is displayed in the current location colored red, by finding the goal and avoiding the pits. The episode ends when either the goal or the pit location is reached. At the end of each experiment, the reward data is saved to a laboratory server. Participants must play the game following these guidelines, and complete the experiments only once, to ensure the integrity of user data.
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+            
+            <b>Agreement:</b>
+
+            <button onclick="sim_run()">Agree</button>
+        </fieldset>
+    </body>
+</html>

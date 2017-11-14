@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>ConvNetJS Deep Q Learning Reinforcement Learning with Neural Network demo</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="./convnet.js"></script>
+  <script src="./util.js"></script>
+  <script src="./vis.js"></script>
+  <script src="./deepqlearn.js"></script>
+  <link rel="stylesheet" href="style.css">
+  
+  <script src="./rldemo.js"></script>
+  <style type="text/css">
+      canvas { border: 1px solid white; }
+    </style>
+
+ </head>
+ <body onload="start();">
+   <div id="wrap">
+
+
+   <h1>State Visualizations</h1>
+   
+   <div><b>Left</b>: Current input state (quite a useless thing to look at). <b>Right</b>: Average reward over time (this should go up as agent becomes better on average at collecting rewards)</div>
+   <!-- <canvas id="vis_canvas" width="350" height="150"></canvas> -->
+   <!-- <canvas id="graph_canvas" width="350" height="150"></canvas><br /> -->
+   <!--  <canvas id="net_canvas" width="700" height="200"></canvas><br /> -->
+   <input type="checkbox" name="func3" id="show_G"> G
+
+   <div style="font-size:13px;">
+   (Takes ~10 minutes to train with current settings. If you're impatient, scroll down and load an example pre-trained network from pre-filled JSON)
+   </div>
+   <canvas id="canvas" width="700" height="500"></canvas>
+   <div id="brain_info_div"></div>
+   
+   <h1>Controls</h1>
+   <button onclick="goveryfast()">Go very fast</button>
+   <button onclick="gofast()">Go fast</button>
+   <button onclick="gonormal()">Go normal speed</button>
+   <button onclick="goslow()">Go slow</button><br />
+   <button onclick="startlearn()">Start Learning</button>
+   <button onclick="stoplearn()">Stop Learning</button>
+   
+   <h1>I/O</h1>
+   <p>
+   You can save and load a network from JSON here.
+   </p>
+   <button onclick="savenet()">Save network to JSON</button>
+   <button onclick="loadnet()">Load network from JSON</button>
+
+ </body>
+</html>
